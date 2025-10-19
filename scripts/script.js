@@ -1,5 +1,5 @@
 const weather = fetch('https://api.openweathermap.org/data/2.5/weather?q=Tehran&appid=0edb791cbd6d5ee53debf897d40a8d84');
-const weatherApi = fetch('http://api.weatherapi.com/v1/forecast.json?key=d52bfd1a105b4aef9a0192118253009&q=Tehran&days=1');
+const weatherApi = fetch('https://api.weatherapi.com/v1/forecast.json?key=d52bfd1a105b4aef9a0192118253009&q=Tehran&days=1');
 const input = document.querySelector('.js-input-search');
 
 beforeSearch();
@@ -17,7 +17,7 @@ document.querySelector('.js-search-button')
 
 function beforeSearch() {
   const weather = fetch('https://api.openweathermap.org/data/2.5/weather?q=Tehran&appid=0edb791cbd6d5ee53debf897d40a8d84');
-  const weatherApi = fetch('http://api.weatherapi.com/v1/forecast.json?key=d52bfd1a105b4aef9a0192118253009&q=Tehran&days=1');
+  const weatherApi = fetch('https://api.weatherapi.com/v1/forecast.json?key=d52bfd1a105b4aef9a0192118253009&q=Tehran&days=1');
 
   weatherApi.then(res => {
     return res.json();
@@ -87,7 +87,7 @@ function beforeSearch() {
 
 function afterSearch() {
   const weather = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=0edb791cbd6d5ee53debf897d40a8d84`);
-  const weatherApi = fetch(`http://api.weatherapi.com/v1/forecast.json?key=d52bfd1a105b4aef9a0192118253009&q=${input.value}&days=1`);
+  const weatherApi = fetch(`https://api.weatherapi.com/v1/forecast.json?key=d52bfd1a105b4aef9a0192118253009&q=${input.value}&days=1`);
 
   weatherApi.then(res => {
     return res.json();
@@ -154,4 +154,5 @@ function afterSearch() {
     document.querySelector('#degerous').innerHTML = `${(data.main.temp / 10).toFixed(2)}°C`;
     document.querySelector('#sky-status').innerHTML = `${data.weather[0].description}`;
   })
+
 }
