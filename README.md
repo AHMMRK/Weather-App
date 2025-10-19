@@ -27,7 +27,7 @@ WeatherAPI
 
 I used these API for this weather App
 
-* [OpenWeatherMap](https://openweathermap.org/api)
+* OpenWeatherMap
 * WeatherAI
 
 🥉 Example
@@ -39,3 +39,4 @@ Search for **any places** → Displays temperature, humidity, and weather icon i
 * 🟙️ Add map integration with **Leaflet.js**
 * 📱 Add “feels like” temperature and sunrise/sunset time
 * 🎤 Add voice search for cities
+
